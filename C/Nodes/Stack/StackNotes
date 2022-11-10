@@ -1,0 +1,69 @@
+Stack ADT (abstract data types)
+    - features and operations. refferenced as a mathamatical model. only care about features and implementation.
+
+only the top of the stack is accessable to be modified. (Last in first out ) collection.
+
+a list with the restriction that insertion and deletion can be preforem only from one end called the top.
+
+
+operations -
+    1. (insert) - Push(x)
+    2. (removing most recent element from the stack) Pop()
+    3. Top() - returns top of the stack.
+    4. IsEmpty (boolean)
+
+all these opeations can be preforemed in cosntant time.
+
+Applications 
+- function calls / recursion.
+- undo in an editor.
+- balanced parentheses. {()} <- example of uses.
+
+
+we can implements stacks -
+Arrays
+Linked Lists
+
+ex of array implementation
+
+int A[10];
+top <- -1 // empty stack
+
+push(x){
+    top <- top+1
+    A[top]<- x
+}
+Pop(){
+    top <- top -1
+}
+Push(2) - the top will be the at index 0 and then insert the (2) at the 0th index in the array.
+Push(10) - top will be incremented, the top of the array will be (2) so it will move to A[0] and increment +1 and insert the value at A[1].
+Push(5) - top of the stack will be A[1] and will increment to A[2] and insert the value at A[2].
+Pop() - will go to the top stack A[2] = 5 and subtract one and will set A[1]  = 10 as the new stack top.
+Push(7) - top will be incremented and will overwrite the A[2] that was previously 5 and will set it as 7.
+
+                                    This all happens in constant time. O(1)
+
+**Overflow
+    - Create a larger array dynamically. Copy all elements in a new array. 
+        - Cost- O(n); where n = to the number of elements in the stack.
+
+top(){
+    return A[top];
+}
+IsEmpty()
+{
+    if (top === -1)
+    return true
+    else
+    return false
+}
+
+    - The new array should be twice the size of the smaller array.
+
+    Push - 0{1} best
+           0{n} worst
+           O{1} average
+    0(n) for n pushes.
+
+C * N (constant * n)

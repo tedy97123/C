@@ -1,0 +1,21 @@
+A data structure is a way to store and organize data in a computer, so that it can be used efficently.
+
+    examples: 
+        1) Mathematical/Logical Models
+
+        2) Abstract View Example: A TVs function. Turned on/off , Recieve Signals , Audio/Video.
+
+    List - Store a given number of elements of anytype.
+        - Read elements by position
+        - modify elements at a postiion
+
+    Arrays (concrete Implementation)
+
+    Linked Lists.
+
+
+Abstract data types - define data and operations , but no Implementation . ( Arrays , Linked Lists, Stack , queue , Tree , Graph.)
+    1) Logical View
+    2) Operations 
+    3) Cost of Operations
+    4) Implementation
